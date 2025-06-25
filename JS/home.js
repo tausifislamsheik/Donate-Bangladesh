@@ -83,7 +83,7 @@ document.getElementById('card3-btn').addEventListener('click', function(){
 
     // History Section
     const div = document.createElement('div');
-    div.className = 'text-center text-3xl font-bold border border-gray-300 rounded-xl';
+    div.className = 'text-3xl font-bold border border-gray-300 rounded-xl';
     // Get current date and time string
     const now = new Date();
     const formattedDate = now.toString();
@@ -95,3 +95,9 @@ document.getElementById('card3-btn').addEventListener('click', function(){
     `;
     document.getElementById('history-container').appendChild(div);
 });
+
+// Blog section
+
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = './blog.html'
+})
