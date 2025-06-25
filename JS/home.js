@@ -106,4 +106,6 @@ document.getElementById('card3-btn').addEventListener('click', function(){
 
 document.getElementById('blog-btn').addEventListener('click', function(){
     window.location.href = './blog.html'
-})
+});
+
+
