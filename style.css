@@ -1,3 +1,19 @@
 .lexend{
     font-family: "Lexend", sans-serif;
+};
+
+/* Common class for the clickable action buttons */
+.active-button {
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease;
 }
+
+/* --- ACTIVE STATE --- */
+/* This style applies when a button has both 'active-button' and 'active' classes */
+.active-button.active {
+    background-color: #B4F461 !important; /* Light blue background, !important to override Tailwind bg-white */
+    border: 1px solid #B4F461 !important; /* Blue border, !important to ensure it's applied */
+    color: #111111 !important;            /* Blue text, !important to override Tailwind text-gray-500 */
+    font-weight: bold !important;         /* Bold text */
+}
+
+/*

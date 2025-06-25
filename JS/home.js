@@ -14,6 +14,14 @@ document.getElementById('card1-btn').addEventListener('click', function(){
     document.getElementById('total-balance').innerText = totalNewBalance;
     
     document.getElementById('inputField-card1').value ='';
+
+    // History Section
+    const div = document.createElement('div');
+    div.className = 'flex justify-center text-2xl font-bold'
+    div.innerText = `
+          ${inputValue} Taka is Donated For Flood at Noakhali,Bangladesh
+    `;
+    document.getElementById('history-container').appendChild(div)
 });
 
 // card 2
