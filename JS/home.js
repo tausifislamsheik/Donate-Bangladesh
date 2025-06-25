@@ -17,11 +17,17 @@ document.getElementById('card1-btn').addEventListener('click', function(){
 
     // History Section
     const div = document.createElement('div');
-    div.className = 'flex justify-center text-2xl font-bold'
-    div.innerText = `
-          ${inputValue} Taka is Donated For Flood at Noakhali,Bangladesh
+    div.className = 'text-center text-3xl font-bold border border-gray-300 rounded-xl';
+    // Get current date and time string
+    const now = new Date();
+    const formattedDate = now.toString();
+    div.innerHTML = `
+        <h1 class='p-4'>
+            <span class='text-green-500'>${inputValue}</span> Taka is Donated For Flood at Noakhali, Bangladesh<br/>
+            <span class="text-lg font-normal text-gray-600">Date: ${formattedDate}</span>
+        </h1>
     `;
-    document.getElementById('history-container').appendChild(div)
+    document.getElementById('history-container').appendChild(div);
 });
 
 // card 2
@@ -41,6 +47,20 @@ document.getElementById('card2-btn').addEventListener('click', function(){
     document.getElementById('total-balance').innerText = totalNewBalance;
     
     document.getElementById('inputField-card2').value ='';
+
+    // History Section
+    const div = document.createElement('div');
+    div.className = 'text-center text-3xl font-bold border border-gray-300 rounded-xl my-5';
+    // Get current date and time string
+    const now = new Date();
+    const formattedDate = now.toString();
+    div.innerHTML = `
+        <h1 class='p-4'>
+            <span class='text-green-500'>${inputValue}</span> Taka is Donated For Flood Relief in Feni,Bangladesh<br/>
+            <span class="text-lg font-normal text-gray-600">Date: ${formattedDate}</span>
+        </h1>
+    `;
+    document.getElementById('history-container').appendChild(div);
 });
 
 // card 3
@@ -60,4 +80,18 @@ document.getElementById('card3-btn').addEventListener('click', function(){
     document.getElementById('total-balance').innerText = totalNewBalance;
     
     document.getElementById('inputField-card3').value ='';
+
+    // History Section
+    const div = document.createElement('div');
+    div.className = 'text-center text-3xl font-bold border border-gray-300 rounded-xl';
+    // Get current date and time string
+    const now = new Date();
+    const formattedDate = now.toString();
+    div.innerHTML = `
+        <h1 class='p-4'>
+            <span class='text-green-500'>${inputValue}</span> Taka is Donated For Injured in the Quota Movement,Bangladesh<br/>
+            <span class="text-lg font-normal text-gray-600">Date: ${formattedDate}</span>
+        </h1>
+    `;
+    document.getElementById('history-container').appendChild(div);
 });
