@@ -54,7 +54,7 @@
                      The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
                 <input class="w-full h-10 rounded-lg p-4 mb-2 border-gray-300" type="text" name="" id="inputField-card1" placeholder="Write Donation Amount">
-                <button id="card1-btn" class="btn w-full bg-lime-300 font-bold rounded-lg">Donate Now</button>
+                <button onclick="my_modal_5.showModal()" id="card1-btn" class="btn w-full bg-lime-300 font-bold rounded-lg">Donate Now</button>
                 </div>
             </div>
          </div>
@@ -72,7 +72,7 @@
                      The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                 </p>
                 <input class="w-full h-10 rounded-lg p-4 mb-2 border-gray-300" type="text" name="" id="inputField-card2" placeholder="Write Donation Amount">
-                <button id="card2-btn" class="btn w-full bg-lime-300 font-bold rounded-lg">Donate Now</button>
+                <button onclick="my_modal_5.showModal()" id="card2-btn" class="btn w-full bg-lime-300 font-bold rounded-lg">Donate Now</button>
                 </div>
             </div>
          </div>
@@ -90,7 +90,7 @@
                      The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                 </p>
                 <input class="w-full h-10 rounded-lg p-4 mb-2 border-gray-300" type="text" name="" id="inputField-card3" placeholder="Write Donation Amount">
-                <button id="card3-btn" class="btn w-full bg-lime-300 font-bold rounded-lg">Donate Now</button>
+                <button onclick="my_modal_5.showModal()" id="card3-btn" class="btn w-full bg-lime-300 font-bold rounded-lg">Donate Now</button>
                 </div>
             </div>
          </div>
@@ -101,6 +101,26 @@
             <div id="history-container" class="w-8/12 mx-auto">
             </div>
           </div>
+
+          <!-- modal -->
+           <!-- Open the modal using ID.showModal() method -->
+            
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div class="text-center">
+                   <h3 class="text-3xl font-bold">Congratulations!</h3>
+                   <img class="mx-auto mt-2" src="images/coin.png" alt="">
+                   <p class="py-4 text-gray-400">You have donated for humankind</p>
+                   <p class="font-bold text-lg">Successfully</p>
+                </div>
+                <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-red-500 text-white">Close</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
     </main>
     <script src="JS/home.js"></script>
     <script src="JS/utilities.js"></script>

@@ -5,11 +5,16 @@ document.getElementById('card1-btn').addEventListener('click', function(){
         alert('Please provide numeric value');
         document.getElementById('inputField-card1').value ='';
         return;
+    };
+    const totalBalance = totalBalanceById('total-balance');
+    if(inputValue > totalBalance){
+        alert('⚠️ Insufficient funds! Please check your account balance.');
+        document.getElementById('inputField-card1').value ='';
+        return;
     }
     const cardBalance = cardBalanceById('card-1');
     const cardNewBalance1 = inputValue + cardBalance;
     document.getElementById('card-1').innerText = cardNewBalance1;
-    const totalBalance = totalBalanceById('total-balance');
     const totalNewBalance = totalBalance - inputValue;
     document.getElementById('total-balance').innerText = totalNewBalance;
     
@@ -17,7 +22,7 @@ document.getElementById('card1-btn').addEventListener('click', function(){
 
     // History Section
     const div = document.createElement('div');
-    div.className = 'text-center text-3xl font-bold border border-gray-300 rounded-xl';
+    div.className = 'text-3xl font-bold border border-gray-300 rounded-xl';
     // Get current date and time string
     const now = new Date();
     const formattedDate = now.toString();
@@ -50,7 +55,7 @@ document.getElementById('card2-btn').addEventListener('click', function(){
 
     // History Section
     const div = document.createElement('div');
-    div.className = 'text-center text-3xl font-bold border border-gray-300 rounded-xl my-5';
+    div.className = 'text-3xl font-bold border border-gray-300 rounded-xl my-5';
     // Get current date and time string
     const now = new Date();
     const formattedDate = now.toString();
@@ -71,7 +76,8 @@ document.getElementById('card3-btn').addEventListener('click', function(){
         alert('Please provide numeric value');
         document.getElementById('inputField-card3').value ='';
         return;
-    }
+    };
+
     const cardBalance = cardBalanceById('card-3');
     const cardNewBalance1 = inputValue + cardBalance;
     document.getElementById('card-3').innerText = cardNewBalance1;
