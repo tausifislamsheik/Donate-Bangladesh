@@ -34,3 +34,22 @@ document.getElementById('card2-btn').addEventListener('click', function(){
     
     document.getElementById('inputField-card2').value ='';
 });
+
+// card 3
+
+document.getElementById('card3-btn').addEventListener('click', function(){
+    const inputValue = cardInputValueById('inputField-card3');
+    if(isNaN(inputValue)){
+        alert('Please provide numeric value');
+        document.getElementById('inputField-card3').value ='';
+        return;
+    }
+    const cardBalance = cardBalanceById('card-3');
+    const cardNewBalance1 = inputValue + cardBalance;
+    document.getElementById('card-3').innerText = cardNewBalance1;
+    const totalBalance = totalBalanceById('total-balance');
+    const totalNewBalance = totalBalance - inputValue;
+    document.getElementById('total-balance').innerText = totalNewBalance;
+    
+    document.getElementById('inputField-card3').value ='';
+});
